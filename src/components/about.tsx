@@ -15,7 +15,7 @@ export function About() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-gold block mb-6">
-              Introducing Just Lance
+              INTRODUCING JUST LANCE
             </span>
 
             <h2 className="font-display font-light text-[clamp(40px,6vw,80px)] leading-[1.1] text-text-primary mb-8">

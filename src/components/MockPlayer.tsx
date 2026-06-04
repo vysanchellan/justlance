@@ -18,10 +18,14 @@ export function MockPlayer({ id, title, subtitle, duration, genre }: MockPlayerP
 
   const bars = useMemo(
     () =>
-      Array.from({ length: 80 }, (_, i) => ({
-        height: 8 + Math.random() * 32,
-        key: i,
-      })),
+      Array.from({ length: 80 }, (_, i) => {
+        const seed = (i * 16807 + 1) % 2147483647
+        const pseudoRandom = (seed % 1000) / 1000
+        return {
+          height: 8 + pseudoRandom * 32,
+          key: i,
+        }
+      }),
     []
   )
 

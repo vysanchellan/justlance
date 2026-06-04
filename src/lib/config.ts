@@ -1,10 +1,10 @@
 export const NAV_ITEMS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
   { label: "Mixes", href: "#mixes" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Events", href: "#services" },
   { label: "Booking", href: "#booking" },
+  { label: "Contact", href: "#booking" },
 ] as const
 
 export const SOCIAL = {
