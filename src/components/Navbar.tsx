@@ -39,14 +39,14 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 h-[72px] transition-all duration-400",
           scrolled
-            ? "bg-[rgba(8,8,8,0.75)] backdrop-blur-[20px] border-b border-[rgba(201,168,76,0.15)]"
+            ? "bg-[rgba(13,11,24,0.8)] backdrop-blur-[20px] border-b border-[rgba(155,89,245,0.15)]"
             : "bg-transparent border-b border-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
           <button
             onClick={() => scrollToSection("#home")}
-            className="font-display text-2xl tracking-[0.15em] text-text-primary hover:text-gold transition-colors"
+            className="font-display text-2xl tracking-[0.15em] text-text-primary hover:text-violet transition-colors"
           >
             JUST LANCE
           </button>
@@ -59,21 +59,21 @@ export function Navbar() {
                 className="group relative font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-text-secondary hover:text-text-primary transition-colors"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-violet group-hover:w-full transition-all duration-300" />
               </button>
             ))}
           </div>
 
           <button
             onClick={() => scrollToSection("#booking")}
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[rgba(201,168,76,0.4)] bg-[rgba(201,168,76,0.1)] text-gold font-body text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-[rgba(201,168,76,0.2)] hover:border-gold transition-all duration-300"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[rgba(155,89,245,0.4)] bg-[rgba(155,89,245,0.1)] text-violet font-body text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-[rgba(155,89,245,0.2)] hover:border-violet transition-all duration-300"
           >
             Book Now
           </button>
 
           <button
             onClick={() => setMobileOpen(true)}
-            className="md:hidden text-text-secondary hover:text-gold transition-colors"
+            className="md:hidden text-text-secondary hover:text-violet transition-colors"
             aria-label="Open menu"
           >
             <Menu size={24} />
@@ -92,7 +92,7 @@ export function Navbar() {
           >
             <button
               onClick={() => setMobileOpen(false)}
-              className="absolute top-6 right-6 text-text-secondary hover:text-gold transition-colors"
+              className="absolute top-6 right-6 text-text-secondary hover:text-violet transition-colors"
               aria-label="Close menu"
             >
               <X size={28} />
@@ -109,7 +109,7 @@ export function Navbar() {
                     setMobileOpen(false)
                     setTimeout(() => scrollToSection(item.href), 200)
                   }}
-                  className="font-body text-2xl font-light tracking-[0.15em] uppercase text-text-secondary hover:text-gold transition-colors"
+                  className="font-body text-2xl font-light tracking-[0.15em] uppercase text-text-secondary hover:text-violet transition-colors"
                 >
                   {item.label}
                 </motion.button>

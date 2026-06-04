@@ -15,7 +15,7 @@ export function Mixes() {
           transition={{ duration: 0.4 }}
           className="mb-16"
         >
-          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-gold block mb-4">
+          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-violet block mb-4">
             Selected Works
           </span>
           <h2 className="font-display font-light text-[clamp(32px,5vw,64px)] text-text-primary">

@@ -16,7 +16,7 @@ const scrollToSection = (href: string) => {
 
 export function Footer() {
   return (
-    <footer className="bg-bg py-14 px-6">
+    <footer className="py-14 px-6">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
         <span className="font-display text-2xl tracking-[0.15em] text-text-primary/80">
           JUST LANCE
@@ -27,7 +27,7 @@ export function Footer() {
             <button
               key={item.label}
               onClick={() => scrollToSection(item.href)}
-              className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-text-dim hover:text-gold transition-colors"
+              className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-text-dim hover:text-violet transition-colors"
             >
               {item.label}
             </button>
@@ -41,7 +41,7 @@ export function Footer() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-dim hover:text-gold hover:scale-110 transition-all"
+              className="text-text-dim hover:text-violet hover:scale-110 transition-all"
               aria-label={label}
             >
               <Icon size={20} />
@@ -58,7 +58,7 @@ export function Footer() {
           <span className="hidden sm:inline text-text-dim">·</span>
           <button
             onClick={() => scrollToSection("#home")}
-            className="font-body text-[10px] text-text-dim tracking-wider hover:text-gold transition-colors"
+            className="font-body text-[10px] text-text-dim tracking-wider hover:text-violet transition-colors"
           >
             Privacy Policy
           </button>

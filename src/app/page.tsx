@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react"
 import { AnimatePresence } from "framer-motion"
 import { LoadingScreen } from "@/components/LoadingScreen"
-import { FloatingPaths } from "@/components/ui/background-paths"
+import { Boxes } from "@/components/ui/background-boxes"
 import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -25,10 +25,10 @@ export default function Home() {
       {loading ? (
         <LoadingScreen key="loader" onComplete={handleLoadComplete} />
       ) : (
-        <div key="main" className="relative bg-neutral-950">
+        <div key="main" className="relative bg-bg min-h-screen">
           <div className="fixed inset-0 z-0">
-            <FloatingPaths position={1} />
-            <FloatingPaths position={-1} />
+            <div className="absolute inset-0 w-full h-full bg-bg z-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_-20%,transparent_40%,black)] pointer-events-none" />
+            <Boxes />
           </div>
           <div className="relative z-10">
             <Navbar />

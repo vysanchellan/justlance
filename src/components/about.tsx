@@ -14,7 +14,7 @@ export function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-gold block mb-6">
+            <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-violet block mb-6">
               INTRODUCING JUST LANCE
             </span>
 
@@ -31,12 +31,12 @@ export function About() {
               journeys, each one bespoke to the room, the crowd, and the moment.
             </p>
 
-            <div className="w-20 h-px bg-gold/60 mb-8" />
+            <div className="w-20 h-px bg-violet/60 mb-8" />
 
             <div className="flex gap-12">
               {STATS.map((stat) => (
                 <div key={stat.label}>
-                  <span className="font-display font-light text-4xl text-gold block">
+                  <span className="font-display font-light text-4xl text-violet block">
                     {stat.value}
                   </span>
                   <span className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-text-dim mt-1 block">
@@ -54,7 +54,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative group aspect-[3/4] overflow-hidden">
-              <div className="absolute inset-0 border border-[rgba(201,168,76,0.3)] group-hover:border-gold/60 transition-colors duration-500 z-10" />
+              <div className="absolute inset-0 border border-[rgba(155,89,245,0.3)] group-hover:border-violet/60 transition-colors duration-500 z-10" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800&q=80"

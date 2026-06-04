@@ -14,7 +14,7 @@ export function Testimonials() {
           transition={{ duration: 0.4 }}
           className="mb-16"
         >
-          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-gold block mb-4">
+          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-violet block mb-4">
             Client Voices
           </span>
           <h2 className="font-display font-light text-[clamp(32px,5vw,64px)] text-text-primary">
@@ -30,12 +30,12 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="border-t-2 border-[rgba(201,168,76,0.3)] pt-8"
+              className="border-t-2 border-[rgba(155,89,245,0.3)] pt-8"
             >
               <p className="font-display font-light italic text-[22px] text-text-primary leading-relaxed mb-6">
                 &ldquo;{item.quote}&rdquo;
               </p>
-              <span className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-gold block">
+              <span className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-violet block">
                 {item.attribution}
               </span>
             </motion.div>

@@ -31,7 +31,7 @@ export function Services() {
           transition={{ duration: 0.4 }}
           className="mb-16"
         >
-          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-gold block mb-4">
+          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-violet block mb-4">
             What Just Lance Offers
           </span>
           <h2 className="font-display font-light text-[clamp(32px,5vw,64px)] text-text-primary">
@@ -47,9 +47,9 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group p-10 bg-[rgba(17,17,17,0.8)] border border-border hover:border-[rgba(201,168,76,0.25)] transition-all duration-500"
+              className="group p-10 bg-[rgba(13,11,24,0.6)] border border-border hover:border-[rgba(155,89,245,0.25)] transition-all duration-500"
             >
-              <div className="w-8 h-[2px] bg-gold mb-8" />
+              <div className="w-8 h-[2px] bg-violet mb-8" />
               <h3 className="font-body text-lg font-semibold text-text-primary mb-4">
                 {service.title}
               </h3>
@@ -61,7 +61,7 @@ export function Services() {
                   const el = document.getElementById("booking")
                   if (el) el.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-gold hover:underline underline-offset-4 transition-all"
+                className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-violet hover:underline underline-offset-4 transition-all"
               >
                 Enquire →
               </button>

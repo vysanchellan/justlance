@@ -18,12 +18,12 @@ export function Hero() {
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        <div className="absolute inset-0 bg-bg" />
+        <div className="absolute inset-0" />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% 60%, rgba(201,168,76,0.04) 0%, transparent 70%)",
+              "radial-gradient(ellipse 80% 60% at 50% 60%, rgba(155,89,245,0.06) 0%, transparent 70%)",
           }}
         />
 
@@ -32,7 +32,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="font-body text-[11px] font-semibold tracking-[0.3em] uppercase text-gold block mb-8"
+            className="font-body text-[11px] font-semibold tracking-[0.3em] uppercase text-violet block mb-8"
           >
             ——— Dubai · UAE ———
           </motion.span>
@@ -72,7 +72,7 @@ export function Hero() {
           >
             <button
               onClick={scrollToBooking}
-              className="px-8 py-3.5 rounded-full border border-[rgba(201,168,76,0.4)] bg-[rgba(201,168,76,0.1)] text-gold font-body text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-[rgba(201,168,76,0.2)] hover:border-gold transition-all duration-300"
+              className="px-8 py-3.5 rounded-full border border-[rgba(155,89,245,0.4)] bg-[rgba(155,89,245,0.1)] text-violet font-body text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-[rgba(155,89,245,0.2)] hover:border-violet transition-all duration-300"
             >
               Book a Private Event
             </button>
@@ -94,7 +94,7 @@ export function Hero() {
           <span className="font-body text-[8px] tracking-[0.3em] uppercase text-text-dim">
             SCROLL
           </span>
-          <div className="w-px h-10 bg-gold/40 animate-pulse" />
+          <div className="w-px h-10 bg-violet/40 animate-pulse" />
         </motion.div>
       </section>
 

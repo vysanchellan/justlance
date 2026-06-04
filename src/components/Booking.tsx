@@ -33,7 +33,7 @@ export function Booking() {
           transition={{ duration: 0.4 }}
           className="mb-16"
         >
-          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-gold block mb-4">
+          <span className="font-body text-[11px] font-semibold tracking-[0.25em] uppercase text-violet block mb-4">
             Work With Lance
           </span>
           <h2 className="font-display font-light text-[clamp(32px,5vw,64px)] text-text-primary">
@@ -53,19 +53,19 @@ export function Booking() {
               brings the same level of care and mastery to every event.
             </p>
 
-            <div className="w-[60px] h-px bg-gold/60 mb-8" />
+            <div className="w-[60px] h-px bg-violet/60 mb-8" />
 
             <div className="space-y-5">
               <div className="flex items-center gap-4">
-                <Mail size={16} className="text-gold/60 flex-shrink-0" />
+                <Mail size={16} className="text-violet/60 flex-shrink-0" />
                 <span className="font-body text-sm text-text-secondary">bookings@justlance.me</span>
               </div>
               <div className="flex items-center gap-4">
-                <Camera size={16} className="text-gold/60 flex-shrink-0" />
+                <Camera size={16} className="text-violet/60 flex-shrink-0" />
                 <span className="font-body text-sm text-text-secondary">@justlance</span>
               </div>
               <div className="flex items-center gap-4">
-                <MapPin size={16} className="text-gold/60 flex-shrink-0" />
+                <MapPin size={16} className="text-violet/60 flex-shrink-0" />
                 <span className="font-body text-sm text-text-secondary">Dubai, UAE · Available Worldwide</span>
               </div>
             </div>
@@ -85,7 +85,7 @@ export function Booking() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="border border-[rgba(201,168,76,0.3)] bg-[rgba(201,168,76,0.05)] p-8 text-center"
+                className="border border-[rgba(155,89,245,0.3)] bg-[rgba(155,89,245,0.05)] p-8 text-center"
               >
                 <p className="font-body text-sm text-text-primary leading-relaxed">
                   Thank you. Lance will be in touch within 24 hours.
@@ -101,7 +101,7 @@ export function Booking() {
                     required
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full bg-[rgba(17,17,17,0.8)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(201,168,76,0.5)] transition-colors"
+                    className="w-full bg-[rgba(13,11,24,0.6)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(155,89,245,0.5)] transition-colors"
                   />
                   <input
                     type="email"
@@ -110,7 +110,7 @@ export function Booking() {
                     required
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full bg-[rgba(17,17,17,0.8)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(201,168,76,0.5)] transition-colors"
+                    className="w-full bg-[rgba(13,11,24,0.6)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(155,89,245,0.5)] transition-colors"
                   />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -119,7 +119,7 @@ export function Booking() {
                     required
                     value={form.eventType}
                     onChange={handleChange}
-                    className="w-full bg-[rgba(17,17,17,0.8)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(201,168,76,0.5)] transition-colors appearance-none"
+                    className="w-full bg-[rgba(13,11,24,0.6)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(155,89,245,0.5)] transition-colors appearance-none"
                   >
                     <option value="" disabled>Event Type</option>
                     <option value="private">Private Event</option>
@@ -132,7 +132,7 @@ export function Booking() {
                     name="eventDate"
                     value={form.eventDate}
                     onChange={handleChange}
-                    className="w-full bg-[rgba(17,17,17,0.8)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(201,168,76,0.5)] transition-colors"
+                    className="w-full bg-[rgba(13,11,24,0.6)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(155,89,245,0.5)] transition-colors"
                   />
                 </div>
                 <textarea
@@ -141,11 +141,11 @@ export function Booking() {
                   rows={4}
                   value={form.message}
                   onChange={handleChange}
-                  className="w-full bg-[rgba(17,17,17,0.8)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(201,168,76,0.5)] transition-colors resize-none"
+                  className="w-full bg-[rgba(13,11,24,0.6)] border border-border rounded-sm px-4 py-3.5 text-text-primary font-body font-light text-sm placeholder:text-text-dim focus:outline-none focus:border-[rgba(155,89,245,0.5)] transition-colors resize-none"
                 />
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-[rgba(201,168,76,0.1)] border border-gold text-gold font-body text-[12px] font-semibold tracking-[0.2em] uppercase hover:bg-[rgba(201,168,76,0.2)] transition-all duration-300"
+                  className="w-full py-3.5 bg-[rgba(155,89,245,0.15)] border border-violet text-violet font-body text-[12px] font-semibold tracking-[0.2em] uppercase hover:bg-[rgba(155,89,245,0.25)] transition-all duration-300"
                 >
                   Submit Enquiry
                 </button>

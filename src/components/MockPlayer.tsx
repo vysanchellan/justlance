@@ -55,7 +55,7 @@ export function MockPlayer({ id, title, subtitle, duration, genre }: MockPlayerP
             className="w-full h-full min-h-[160px]"
             style={{
               background:
-                "linear-gradient(135deg, #1a1a14 0%, #2d2a1a 50%, #1a1814 100%)",
+                "linear-gradient(135deg, #0f0b1a 0%, #1a1030 50%, #0f0b1a 100%)",
             }}
           />
           <span className="absolute top-4 left-4 font-display font-light text-5xl text-text-dim/30">
@@ -78,7 +78,7 @@ export function MockPlayer({ id, title, subtitle, duration, genre }: MockPlayerP
                 {duration}
               </span>
             </div>
-            <span className="font-body text-[10px] font-semibold tracking-[0.15em] uppercase text-gold/60">
+            <span className="font-body text-[10px] font-semibold tracking-[0.15em] uppercase text-violet/60">
               {genre}
             </span>
           </div>
@@ -91,7 +91,7 @@ export function MockPlayer({ id, title, subtitle, duration, genre }: MockPlayerP
                   className={cn(
                     "w-[3px] transition-all duration-300",
                     bar.key / 80 < progress / 100
-                      ? "bg-gold/80"
+                      ? "bg-violet/80"
                       : "bg-text-dim/20"
                   )}
                   style={{
@@ -104,7 +104,7 @@ export function MockPlayer({ id, title, subtitle, duration, genre }: MockPlayerP
             <div className="flex items-center gap-4">
               <button
                 onClick={handlePlay}
-                className="w-[52px] h-[52px] rounded-full border border-[rgba(201,168,76,0.4)] flex items-center justify-center text-gold hover:bg-[rgba(201,168,76,0.1)] hover:border-gold transition-all flex-shrink-0"
+                className="w-[52px] h-[52px] rounded-full border border-[rgba(155,89,245,0.4)] flex items-center justify-center text-violet hover:bg-[rgba(155,89,245,0.1)] hover:border-violet transition-all flex-shrink-0"
                 aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? <Pause size={18} /> : <Play size={18} className="ml-0.5" />}
@@ -112,7 +112,7 @@ export function MockPlayer({ id, title, subtitle, duration, genre }: MockPlayerP
 
               <div className="flex-1 h-1 bg-[#222] rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gold/60 rounded-full transition-all duration-300"
+                  className="h-full bg-violet/60 rounded-full transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 />
               </div>
