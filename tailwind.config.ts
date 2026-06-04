@@ -9,27 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "var(--bg)",
         surface: "var(--surface)",
-        "accent-cyan": "var(--accent-cyan)",
-        "accent-magenta": "var(--accent-magenta)",
-        "text-muted": "var(--text-muted)",
+        "surface-2": "var(--surface-2)",
         border: "var(--border)",
+        gold: "var(--gold)",
+        "gold-light": "var(--gold-light)",
+        "gold-dim": "var(--gold-dim)",
+        "text-primary": "var(--text-primary)",
+        "text-secondary": "var(--text-secondary)",
+        "text-dim": "var(--text-dim)",
+        "glass-bg": "var(--glass-bg)",
+        "glass-border": "var(--glass-border)",
       },
       fontFamily: {
         display: ["var(--font-display)"],
         body: ["var(--font-body)"],
-        mono: ["var(--font-mono)"],
-      },
-      animation: {
-        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
-      },
-      keyframes: {
-        "glow-pulse": {
-          "0%, 100%": { opacity: "0.3" },
-          "50%": { opacity: "0.8" },
-        },
       },
     },
   },

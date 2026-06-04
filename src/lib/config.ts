@@ -1,16 +1,11 @@
-export const BRAND = {
-  bg: "#0A0A0A",
-  surface: "#111111",
-  accent: {
-    cyan: "#00D4FF",
-    magenta: "#FF2D87",
-  },
-  text: {
-    primary: "#F5F5F5",
-    muted: "#666666",
-  },
-  border: "rgba(255,255,255,0.08)",
-} as const
+export const NAV_ITEMS = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Mixes", href: "#mixes" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Booking", href: "#booking" },
+] as const
 
 export const SOCIAL = {
   instagram: "https://instagram.com/justlance",
@@ -18,22 +13,40 @@ export const SOCIAL = {
   mixcloud: "https://mixcloud.com/justlance",
 } as const
 
-export const NAV_ITEMS = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Booking", href: "#booking" },
-  { label: "Contact", href: "#contact" },
-] as const
-
 export const MIXES = [
   {
-    title: "@HOME | PRIVATEAFFAIR | Mixed by Just Lance",
+    id: "01",
+    title: "@HOME | PRIVATE AFFAIR",
+    subtitle: "Mixed by Just Lance",
     duration: "2:03:25",
-    embedUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/placeholder1&color=%2300D4FF&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    genre: "Deep House · Melodic",
   },
   {
-    title: "Deep House Session | Mixed by Just Lance",
-    duration: "1:45:00",
-    embedUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/placeholder2&color=%2300D4FF&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    id: "02",
+    title: "JUST LANCE — OPEN FORMAT",
+    subtitle: "Live Recording, Dubai 2024",
+    duration: "2:04:01",
+    genre: "Open Format · House",
   },
+] as const
+
+export const TESTIMONIALS = [
+  {
+    quote: "Lance doesn't just play music — he curates a world. Our guests still talk about it months later.",
+    attribution: "Private Client, Dubai Marina",
+  },
+  {
+    quote: "We've worked with DJs across five continents. None of them brought what Lance brings to a room.",
+    attribution: "Event Director, Burj Al Arab",
+  },
+  {
+    quote: "The perfect soundtrack to a perfect evening. Effortless, elegant, unforgettable.",
+    attribution: "Lifestyle Brand Activation, DIFC",
+  },
+] as const
+
+export const STATS = [
+  { value: "30+", label: "Years Experience" },
+  { value: "500+", label: "Private Events" },
+  { value: "15+", label: "Countries" },
 ] as const

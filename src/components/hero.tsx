@@ -1,68 +1,125 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FloatingPaths } from "@/components/ui/background-paths"
+import { useState } from "react"
+import { X } from "lucide-react"
 
-const headline = "Just Lance is a stalwart DJ of the Dubai Scene".split(" ")
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.15 },
-  },
-}
-
-const item = {
-  hidden: { y: 40, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" as const } },
+const scrollToBooking = () => {
+  const el = document.getElementById("booking")
+  if (el) el.scrollIntoView({ behavior: "smooth" })
 }
 
 export function Hero() {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-[#0A0A0A]" />
-      <div className="absolute inset-0 opacity-30">
-        <FloatingPaths position={1} />
-        <FloatingPaths position={-1} />
-      </div>
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent-cyan/5 blur-[120px] animate-glow-pulse pointer-events-none" />
+  const [showreelOpen, setShowreelOpen] = useState(false)
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <motion.h1
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className="font-display text-6xl sm:text-8xl md:text-[120px] leading-[0.9] text-white mb-8"
-        >
-          {headline.map((word, i) => (
-            <motion.span
-              key={i}
-              variants={item}
-              className="inline-block mr-[0.15em] last:mr-0"
+  return (
+    <>
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-bg" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 50% 60%, rgba(201,168,76,0.04) 0%, transparent 70%)",
+          }}
+        />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="font-body text-[11px] font-semibold tracking-[0.3em] uppercase text-gold block mb-8"
+          >
+            ——— Dubai · UAE ———
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
+            className="font-display font-light text-[clamp(80px,12vw,160px)] leading-[0.9] text-text-primary mb-6"
+          >
+            JUST LANCE
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+            className="font-display font-light italic text-[clamp(24px,4vw,48px)] text-text-secondary mb-8"
+          >
+            Architect of Sound. Curator of Experience.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="font-body font-light text-base text-text-dim max-w-[480px] mx-auto leading-relaxed mb-12"
+          >
+            30 years of commanding rooms across the Middle East&apos;s most exclusive venues.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.4, duration: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <button
+              onClick={scrollToBooking}
+              className="px-8 py-3.5 rounded-full border border-[rgba(201,168,76,0.4)] bg-[rgba(201,168,76,0.1)] text-gold font-body text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-[rgba(201,168,76,0.2)] hover:border-gold transition-all duration-300"
             >
-              {word}
-              {word === "DJ" && (
-                <span className="inline-block w-2 h-2 bg-accent-cyan rounded-full ml-2 align-middle" />
-              )}
-            </motion.span>
-          ))}
-        </motion.h1>
+              Book a Private Event
+            </button>
+            <button
+              onClick={() => setShowreelOpen(true)}
+              className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Watch Showreel ▶
+            </button>
+          </motion.div>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="flex justify-start"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{ delay: 2, duration: 0.8 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-3 bg-accent-cyan text-black font-body font-bold px-8 py-4 rounded-full text-lg hover:scale-105 hover:glow-cyan transition-all duration-300"
-          >
-            Book a Consultation
-            <span className="text-xl">🎵</span>
-          </a>
+          <span className="font-body text-[8px] tracking-[0.3em] uppercase text-text-dim">
+            SCROLL
+          </span>
+          <div className="w-px h-10 bg-gold/40 animate-pulse" />
         </motion.div>
-      </div>
-    </section>
+      </section>
+
+      {showreelOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6"
+          onClick={() => setShowreelOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl aspect-video bg-surface border border-border rounded-sm overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowreelOpen(false)}
+              className="absolute top-4 right-4 z-10 text-text-secondary hover:text-text-primary transition-colors"
+              aria-label="Close showreel"
+            >
+              <X size={24} />
+            </button>
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="font-body text-sm text-text-dim">Showreel embed placeholder</span>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
