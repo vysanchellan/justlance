@@ -62,7 +62,7 @@ export function Booking() {
               </div>
               <div className="flex items-center gap-4">
                 <Camera size={16} className="text-violet/60 flex-shrink-0" />
-                <span className="font-body text-sm text-text-secondary">@justlance</span>
+                <span className="font-body text-sm text-text-secondary">@justlanceoffical</span>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin size={16} className="text-violet/60 flex-shrink-0" />

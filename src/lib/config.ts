@@ -8,7 +8,7 @@ export const NAV_ITEMS = [
 ] as const
 
 export const SOCIAL = {
-  instagram: "https://instagram.com/justlance",
+  instagram: "https://instagram.com/justlanceoffical",
   soundcloud: "https://soundcloud.com/justlance",
   mixcloud: "https://mixcloud.com/justlance",
 } as const

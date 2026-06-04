@@ -57,7 +57,7 @@ export function About() {
               <div className="absolute inset-0 border border-[rgba(155,89,245,0.3)] group-hover:border-violet/60 transition-colors duration-500 z-10" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800&q=80"
+                src="https://i.ibb.co/wF7Y69hb/Whats-App-Image-2026-06-04-at-14-21-47.jpg"
                 alt="Just Lance DJ"
                 className="w-full h-full object-cover rotate-[-1deg] scale-105 group-hover:rotate-0 transition-transform duration-500"
               />
