@@ -24,7 +24,7 @@ export function Booking() {
   }
 
   return (
-    <section id="booking" className="py-32 px-6">
+    <section id="booking" className="py-32 px-6 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

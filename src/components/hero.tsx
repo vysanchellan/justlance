@@ -16,7 +16,7 @@ export function Hero() {
     <>
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20"
       >
         <div className="absolute inset-0" />
         <div
@@ -80,7 +80,7 @@ export function Hero() {
               onClick={() => setShowreelOpen(true)}
               className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-text-secondary hover:text-text-primary transition-colors"
             >
-              Watch Showreel ▶
+              Watch Showreel
             </button>
           </motion.div>
         </div>

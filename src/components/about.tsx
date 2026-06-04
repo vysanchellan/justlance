@@ -5,7 +5,7 @@ import { STATS } from "@/lib/config"
 
 export function About() {
   return (
-    <section id="about" className="py-32 px-6">
+    <section id="about" className="py-32 px-6 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[60fr_40fr] gap-16 items-center">
           <motion.div
