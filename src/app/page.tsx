@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react"
 import { AnimatePresence } from "framer-motion"
 import { LoadingScreen } from "@/components/LoadingScreen"
+import { FloatingPaths } from "@/components/ui/background-paths"
 import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -24,15 +25,21 @@ export default function Home() {
       {loading ? (
         <LoadingScreen key="loader" onComplete={handleLoadComplete} />
       ) : (
-        <div key="main">
-          <Navbar />
-          <Hero />
-          <About />
-          <Services />
-          <Mixes />
-          <Testimonials />
-          <Booking />
-          <Footer />
+        <div key="main" className="relative bg-neutral-950">
+          <div className="fixed inset-0 z-0">
+            <FloatingPaths position={1} />
+            <FloatingPaths position={-1} />
+          </div>
+          <div className="relative z-10">
+            <Navbar />
+            <Hero />
+            <About />
+            <Services />
+            <Mixes />
+            <Testimonials />
+            <Booking />
+            <Footer />
+          </div>
         </div>
       )}
     </AnimatePresence>
